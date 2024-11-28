@@ -1,0 +1,236 @@
+/* Importação de arquivos de estilos */
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodapé.css");
+
+/* Variáveis de cores */
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --azul: #002F52;
+    --cinza-claro: #F4F4F4;
+    --cinza-escuro: #333333;
+    --verde: #4CAF50; /* Exemplo de nova cor */
+}
+
+/* Reset básico e fontes */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--cinza-escuro);
+    padding: 0;
+    margin: 0;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--laranja);
+}
+
+/* Estilos para botões e links com ação */
+button, .botões__ancora {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .botões__ancora:hover {
+    background-color: darken(var(--laranja), 10%);
+}
+
+/* Layout - Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 1.5rem 0;
+}
+
+.cabeçalho__menu-hamburguer {
+    display: none;
+}
+
+/* Banner */
+.banner {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.banner__titulo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.banner__texto {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Carrossel */
+.swiper {
+    padding: 2rem 0;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carrossel__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Tópicos */
+.tópicos__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.tópicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tópicos__item {
+    margin: 0.5rem 1rem;
+}
+
+.tópicos__link {
+    font-size: 1rem;
+    color: var(--azul);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.tópicos__link:hover {
+    color: var(--laranja);
+}
+
+/* Contato */
+.contato {
+    background-color: var(--cinza-claro);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.contato__titulo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contato__texto {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contato__email {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--cinza-escuro);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.rodapé__titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .banner__titulo {
+        font-size: 1.5rem;
+    }
+
+    .banner__texto {
+        font-size: 1rem;
+    }
+
+    .carrossel_titulo, .tópicos_titulo {
+        font-size: 1.5rem;
+    }
+
+    .swiper-slide img {
+        width: 90%;
+    }
+
+    .tópicos__lista {
+        flex-direction: column;
+    }
+
+    .tópicos__item {
+        margin: 0.5rem 0;
+    }
+
+    .contato__email {
+        width: 80%;
+    }
+}
